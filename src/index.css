@@ -1,13 +1,100 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+button{
+    background-color: #313149;
+    border: #313149;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.navbar {
+ height: 60px;
+ width: 200px;
+ overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo {
+ width: 200px;
+ transform: translateY(-72px);
+}
+.design {
+ width: 357px;
+ height: 61px;
+ margin-top: 40px;
+}
+.img-text {
+ font-size: 37px;
+ font-weight: 400;
+}
+
+.overlay-text {
+ left: 0;
+ font-size: 38px;
+ padding-top: 37px; 
+ padding-left: 83px;
+}
+
+.text{
+ font-size: 38px;
+ padding-left: 150px;
+ margin-top: -7px;
+}
+
+.inputs {
+ width: 400px;
+ border-radius: 10px;
+ margin-top: 104px; 
+ margin-left: 36px;
+}
+
+.home-inputs-dropdown {
+ width: 180px; 
+ height: 52px;
+ padding-left: 16px; 
+ border-radius: 5px;
+ margin-right: 20px;
+ border: 2px solid black;
+ margin-bottom: 39px;
+}
+.generate-btn1{
+padding: 16px 135px;
+}
+.right-side{
+ margin-left: 55px;
+ margin-top: 60px;
+}
+
+.textarea {
+ width: 528px;
+ height: 540px;
+ border: 4px solid black;
+ border-radius: 15px;
+ margin-top: 58px;
+}
+
+
+.generate-btn2{
+padding: 5px 10px;
+margin-bottom: 30px;
+font-size: 40px;
+
+
+}
+.cart{
+    display: flex;
+   margin-left: 470px;
+}
+
+.next-previous{
+ width: 520px;
+ margin-left: 9px;
+ margin-top: 22px;
+ margin-bottom: 21px;
+}
+.next-btn{
+ padding: 8px 33px;
+}
+.previous-btn{
+    padding: 8px 19px;
+}
+.icons{
+ gap: 15px;
 }
