@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
-import Main from './Main';
+import Main from './Components/Main';
 
 const App = () => {
   return (
@@ -10,5 +10,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
