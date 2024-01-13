@@ -10,11 +10,7 @@ export default function LeftSide() {
     setLoading(true); 
     try {
       const response = await axios.get('https://recommendation.decorist.ai:5000/api/v1/generate?style=bohemian&color=1&user_id=1', {
-        params: {
-          style: 'bohemian',
-          color: '1',
-          user_id: '1',
-        },
+      
       });
       setData(response.data);
     } catch (error) {
