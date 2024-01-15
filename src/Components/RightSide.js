@@ -30,10 +30,6 @@ const RightSide = ({ showImages, generatedImages }) => {
     }
   };
 
-  const calculateTotalPrice = () => {
-    const totalPrice = currentImages.reduce((total, image) => total + (image.price || 0), 0);
-    return totalPrice.toFixed(2); 
-  };
 
   return (
     <div>
@@ -60,7 +56,7 @@ const RightSide = ({ showImages, generatedImages }) => {
         </div>
         <div>
         <button className="generate-btn2 d-flex justify-content-between" type="button">
-            <span>${calculateTotalPrice()}</span>
+          
             <span><FaShoppingCart /></span>
           </button>
         </div>
