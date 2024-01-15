@@ -70,17 +70,12 @@ padding: 16px 129px;
 }
 
 
-.generate-btn2{
-padding: 5px 10px;
-margin-bottom: 30px;
-font-size: 40px;
-
-
-}
-.cart{
-    display: flex;
-   margin-left: 470px;
-}
+.generate-btn2 {
+    padding: 5px 20px; 
+    margin-bottom: 30px;
+    font-size: 30px;
+    width: 540px;
+    }
 
 .next-previous{
  width: 520px;
