@@ -10,15 +10,15 @@ const LeftSide = ({ onGenerateClick }) => {
   const findLayout = (moodTemplateID) => layouts.find((layout) => layout.mood_Template_ID === moodTemplateID);
 
   const handleGenerateClick = () => {
-    const generatedImages = moodboards.flatMap((moodboard) =>
-      moodboard.Items.map((item) => {
-        const layoutItem = findLayout(moodboard.moodboard_Template_ID).items.find((layoutItem) => layoutItem.category === item.category);
-        return { imageURL: item.ImageURL, ...layoutItem };
-      })
-    );
-
-    onGenerateClick(generatedImages);
-    setShowImages(true);
+    const firstMoodboard = moodboards[0];
+    const generatedImages = firstMoodboard.Items.map((item, index) => {
+      const layoutItem = findLayout(firstMoodboard.moodboard_Template_ID).items.find(
+        (layoutItem) => layoutItem.category === item.category
+      );
+      return { imageURL: item.ImageURL, ...layoutItem, id: index + 1 }; 
+    });
+  
+    onGenerateClick(generatedImages); 
   };
 
   return (
