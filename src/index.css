@@ -71,6 +71,8 @@ padding: 16px 129px;
 
 
 .generate-btn2 {
+    display: flex;
+    justify-content: space-between;
     padding: 5px 20px; 
     margin-bottom: 30px;
     font-size: 30px;

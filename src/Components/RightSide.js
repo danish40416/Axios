@@ -5,7 +5,7 @@ import { FaRegBookmark } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { BiSolidDislike } from "react-icons/bi";
 
-export default function RightSide({ showImages, generatedImages }) {
+export default function RightSide({ showImages, generatedImages, handleNextClick, handlePreviousClick }) {
   return (
     <div>
       <div className='right-side'>
@@ -34,12 +34,13 @@ export default function RightSide({ showImages, generatedImages }) {
             <FaRegBookmark />
           </div>
           <div>
-            <button className="previous-btn me-2" type="button">Previous </button>
-            <button className="next-btn" type="button">Next</button>
+            <button className="previous-btn me-2" type="button" onClick={handlePreviousClick}>Previous </button>
+            <button className="next-btn" type="button" onClick={handleNextClick}>Next</button>
           </div>
         </div>
         <div>
           <button className="generate-btn2 " type="button">
+            <span>0.00</span>
             <span className='cart'><FaShoppingCart /></span>
           </button>
         </div>
