@@ -2,26 +2,25 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import RightSide from './RightSide';
 import LeftSide from './LeftSide';
-import DATA from './data';
+import DATA from './data'; 
 
 const App = () => {
   const moodboards = DATA.data.moodboards;
-  const layouts = DATA.data.layout;
+  const layouts = DATA.data.layout; 
 
   const findLayout = (moodTemplateID) =>
     layouts.find((layout) => layout.mood_Template_ID === moodTemplateID);
 
   const [generatedImages, setGeneratedImages] = useState([]);
   const [currentMoodboardIndex, setCurrentMoodboardIndex] = useState(0);
-
-  const generateImagesForMoodboard = (index) => {
+  const generateImagesForMoodboard = (index) => { 
     const moodboard = moodboards[index];
     const generatedImages = moodboard.Items.map((item, index) => {
-      const layoutItem = findLayout(moodboard.moodboard_Template_ID).items.find(
+      const layoutItem = findLayout(moodboard.moodboard_Template_ID).items.find( 
         (layoutItem) => layoutItem.category === item.category
       );
       return { imageURL: item.ImageURL, ...layoutItem, id: index + 1 };
-    });
+    }).reverse();
     setGeneratedImages(generatedImages);
     setCurrentMoodboardIndex(index);
   };
