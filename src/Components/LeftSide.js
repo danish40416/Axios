@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { Image } from 'react-bootstrap';
 
-const LeftSide = () => {
- 
+const LeftSide = ({ onGenerateClick }) => {
+  const handleGenerateClick = () => {
+    onGenerateClick();
+  };
 
   return (
     <div className='text-container position-relative'>
-    
+      <Image src={require('../images/abc.jpg')} className="design ms-5" alt="Design" />
       <div className="text">
         <span className="overlay-text position-absolute top-0 img-text">Get Your Design in </span>
         a Second
@@ -23,7 +26,7 @@ const LeftSide = () => {
           ))}
         </div>
         <div>
-          <button className="generate-btn1 me-3 mt-4">
+          <button className="generate-btn1 me-3 mt-4" onClick={handleGenerateClick}>
             <span className="button-text">Generate</span>
           </button>
         </div>
